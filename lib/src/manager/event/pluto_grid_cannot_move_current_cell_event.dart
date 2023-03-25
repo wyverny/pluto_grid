@@ -14,5 +14,11 @@ class PlutoGridCannotMoveCurrentCellEvent extends PlutoGridEvent {
   }) : super();
 
   @override
-  void handler(PlutoGridStateManager stateManager) {}
+  void handler(PlutoGridStateManager stateManager) {
+    if (stateManager.isEditing) {
+      final PlutoGridCellPosition? position = stateManager.currentSelectingPosition;
+      stateManager.setEditing(false);
+      stateManager.setCurrentSelectingPosition(cellPosition: position);
+    }
+  }
 }

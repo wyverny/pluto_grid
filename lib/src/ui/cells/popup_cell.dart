@@ -98,8 +98,8 @@ mixin PopupCellState<T extends PopupCell> on State<T>
       configuration: widget.stateManager.configuration.copyWith(
         tabKeyAction: PlutoGridTabKeyAction.normal,
         style: widget.stateManager.configuration.style.copyWith(
-          oddRowColor: const PlutoOptional(null),
-          evenRowColor: const PlutoOptional(null),
+          // oddRowColor: const PlutoOptional(null),
+          // evenRowColor: const PlutoOptional(null),
           gridBorderRadius:
               widget.stateManager.configuration.style.gridPopupBorderRadius,
           defaultColumnTitlePadding: PlutoGridSettings.columnTitlePadding,
